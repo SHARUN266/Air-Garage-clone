@@ -3,7 +3,7 @@ import React from 'react'
 
 export default function LandingPage() {
   return (
-    <Box  h="100vh"   >
+    <Box  h="auto" p="5rem"   >
 
     </Box>
   )
