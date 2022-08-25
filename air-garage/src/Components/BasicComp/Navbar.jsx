@@ -34,8 +34,32 @@ const NavLink = ({ children }: { children: ReactNode }) => (
 export default function Nav() {
 
   const { isOpen, onOpen, onClose } = useDisclosure();
-  const Links = ["Find parking", "Login"];
-  const Links1 = ["Find parking", "Login", "Talk to sales"];
+  const Links = [
+     {
+      link:"/findparking",
+      title:"Find parking"
+     },
+     {
+      link:"/login",
+      title:"Login"
+     }
+
+  ];
+  const Links1 = [ 
+    {
+     link:"/findparking",
+     title:"Find parking"
+    },
+    {
+     link:"/login",
+     title:"Login"
+    },
+    {
+      link:"/talktosales",
+      title:"Talk to sales"
+    }
+
+ ]
   const styles = {
     fontFamily: "'Louis george cafe', sans-serif;",
     padding: "20px",
@@ -71,10 +95,11 @@ export default function Nav() {
                 display={{ base: "none", md: "flex" }}
               >
                 {Links.map((elem) => (
-                  <Box style={styles}>{elem}</Box>
+                  <Box style={styles}>  <Link   to={elem.link}  > {elem.title}</Link> </Box>
                 ))}
                 <Box color={styles} fontWeight={"bold"}>
-                  Talk to sales
+                  <Link to="/talktosales">Talk to sales</Link>
+                  
                 </Box>
               </HStack>
             </HStack>
@@ -84,7 +109,7 @@ export default function Nav() {
           <Box pb={4} display={{ md: "none" }}>
             <Menu as={"nav"} spacing={4}>
               {Links1.map((link) => (
-                <MenuItem key={link}>{link}</MenuItem>
+                <MenuItem key={link}> <Link  to={link.link}  >{link.title}</Link>  </MenuItem>
               ))}
             </Menu>
           </Box>
