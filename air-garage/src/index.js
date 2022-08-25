@@ -5,22 +5,27 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { ChakraProvider, extendTheme } from '@chakra-ui/react';
 import { BrowserRouter } from 'react-router-dom';
+import AppContextProvider from './Context/AppContext';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 const theme=extendTheme({
   colors:{
      bg:"#fec",
-     color:"#fa824c"
+     color:"#fa824c",
+     text:"#a1a6af"
 
   }
 })
 root.render(
   <React.StrictMode>
+    <AppContextProvider>
     <ChakraProvider  theme={theme}>
       <BrowserRouter>
+    
     <App />
     </BrowserRouter>
     </ChakraProvider>
+    </AppContextProvider>
   </React.StrictMode>
 );
 

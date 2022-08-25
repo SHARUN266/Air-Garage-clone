@@ -6,8 +6,8 @@ import {
   Stack,
   Text,
   Flex,
-  Tag,
-  Image,
+  
+
   useColorModeValue,
 } from "@chakra-ui/react";
 import { ReactNode } from "react";

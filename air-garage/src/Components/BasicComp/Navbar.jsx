@@ -2,23 +2,17 @@ import { ReactNode } from "react";
 import {
   Box,
   Flex,
-  Avatar,
-  Button,
   Menu,
-  MenuButton,
-  MenuList,
   MenuItem,
-  MenuDivider,
+  
   useDisclosure,
   useColorModeValue,
-  Stack,
-  Image,
-  useColorMode,
-  Center,
+ 
+  
   IconButton,
   HStack,
 } from "@chakra-ui/react";
-import { CloseIcon, HamburgerIcon, MoonIcon, SunIcon } from "@chakra-ui/icons";
+import { CloseIcon, HamburgerIcon } from "@chakra-ui/icons";
 import { Link } from "react-router-dom";
 import Logo from "./Logo";
 
@@ -38,28 +32,50 @@ const NavLink = ({ children }: { children: ReactNode }) => (
 );
 
 export default function Nav() {
-  const { colorMode, toggleColorMode } = useColorMode();
+
   const { isOpen, onOpen, onClose } = useDisclosure();
- const Links=["Find parking","Login"]
- const Links1=["Find parking","Login","Talk to sales"]
- const styles={
-    fontFamily:"'Louis george cafe', sans-serif;",
-    padding:"20px",
-    fontSize:"14px"
+  const Links = [
+     {
+      link:"/findparking",
+      title:"Find parking"
+     },
+     {
+      link:"/login",
+      title:"Login"
+     }
 
+  ];
+  const Links1 = [ 
+    {
+     link:"/findparking",
+     title:"Find parking"
+    },
+    {
+     link:"/login",
+     title:"Login"
+    },
+    {
+      link:"/talktosales",
+      title:"Talk to sales"
+    }
 
- }
+ ]
+  const styles = {
+    fontFamily: "'Louis george cafe', sans-serif;",
+    padding: "20px",
+    fontSize: "14px",
+  };
 
-//  fontSize={"14px"}
-//  p="20px"
-//  fontFamily={"'Louis george cafe', sans-serif;"}
-//  fontWeight="bold"
+  //  fontSize={"14px"}
+  //  p="20px"
+  //  fontFamily={"'Louis george cafe', sans-serif;"}
+  //  fontWeight="bold"
   return (
     <>
       <Box bg="white" m={"auto"} w="90%" px={4}>
         <Flex h={16} alignItems={"center"} justifyContent={"space-between"}>
           <Box>
-            <Logo/>
+            <Logo />
           </Box>
 
           <Flex alignItems={"center"}>
@@ -78,29 +94,22 @@ export default function Nav() {
                 spacing={4}
                 display={{ base: "none", md: "flex" }}
               >
-                {
-                    Links.map((elem)=>(
-                        <Box
-                        style={styles}
-                       >
-                         
-                         {elem}
-                       </Box>
-
-                    ))
-                }
-                <Box color={styles} fontWeight={"bold"}  >Talk to sales</Box>
-               
-              
+                {Links.map((elem) => (
+                  <Box style={styles}>  <Link   to={elem.link}  > {elem.title}</Link> </Box>
+                ))}
+                <Box color={styles} fontWeight={"bold"}>
+                  <Link to="/talktosales">Talk to sales</Link>
+                  
+                </Box>
               </HStack>
             </HStack>
           </Flex>
         </Flex>
         {isOpen ? (
-          <Box pb={4} display={{ md: 'none' }}>
-            <Menu as={'nav'} spacing={4}>
+          <Box pb={4} display={{ md: "none" }}>
+            <Menu as={"nav"} spacing={4}>
               {Links1.map((link) => (
-                <MenuItem key={link}>{link}</MenuItem>
+                <MenuItem key={link}> <Link  to={link.link}  >{link.title}</Link>  </MenuItem>
               ))}
             </Menu>
           </Box>
