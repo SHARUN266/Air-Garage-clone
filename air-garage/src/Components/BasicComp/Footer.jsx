@@ -30,7 +30,7 @@ const ListHeader = ({ children }: { children: ReactNode }) => {
 
 export default function LargeWithLogoCentered() {
   return (
-    <Box bg={"bg"} color={"color"}>
+    <Box bg={"bg"} color={"color"} data-aos="fade-up" mt="5%"  >
       <Box py={10}>
         <Flex
           align={"center"}

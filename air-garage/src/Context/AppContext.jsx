@@ -3,7 +3,7 @@ import { useState } from "react";
 
 export const AppContext=React.createContext();
 function AppContextProvider({children}) {
-  const [isAuth,setIsAuth]=useState(false)
+  const [isAuth,setIsAuth]=useState(true)
   const [token,setToken]=useState(null)
   const loginUser=(token)=>{
     setIsAuth(true)

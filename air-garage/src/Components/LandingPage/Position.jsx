@@ -20,7 +20,7 @@ export default function Position() {
     },
   ];
   return (
-    <Box  m="auto" alignItems="center" p="2rem" h={"auto"}>
+    <Box data-aos="fade-up"  m="auto" alignItems="center" p="2rem" h={"auto"}>
       <Box textAlign={"justify"}  >
         <Heading>Our value proposition</Heading>
         <Text color="text" mt="3%" >

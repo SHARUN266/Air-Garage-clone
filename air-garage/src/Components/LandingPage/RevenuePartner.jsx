@@ -29,14 +29,14 @@ export default function RevenuePartner() {
       <Box m="auto"  w={{base:"100%",md:"200%"}} pr={"2rem"} h="350px"  >
         <Image
           h="100%"
-          
+          data-aos="fade-right"
           borderBottomRadius={"2%"}
           w="100%"
           src="https://assets.website-files.com/5d55f1425cb6b7a18aa77528/60a6d928e7187f18da1ab8c1_color-garage-p-500.png"
           alt="revenue Partner Image"
         />
       </Box>
-      <Box textAlign={"justify"}>
+      <Box textAlign={"justify"} data-aos="fade-left"  >
         <Heading  fontWeight={600}  >Partner with AirGarage</Heading>
         <Text  mt="5%" color={"text"}>
           AirGarage is a full service parking operator. We handle all of the
