@@ -6,6 +6,14 @@ import reportWebVitals from './reportWebVitals';
 import { ChakraProvider, extendTheme } from '@chakra-ui/react';
 import { BrowserRouter } from 'react-router-dom';
 import AppContextProvider from './Context/AppContext';
+import AOS from 'aos';
+import 'aos/dist/aos.css'; // You can also use <link> for styles
+// ..
+AOS.init({
+    offset: 200,
+    delay: 50,
+    once: false
+});
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 const theme=extendTheme({

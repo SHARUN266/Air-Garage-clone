@@ -1,12 +1,12 @@
 import { Box, Button, Flex, Stack } from '@chakra-ui/react'
 import React from 'react'
 import { Link, NavLink } from 'react-router-dom'
-import AllRoutes from './AllRoutes'
+import AllRoutes1 from './AllRoutes'
 
 export default function Main() {
     const Links=[
         {
-            link:"/dashboard",
+            link:"/",
             title:"Dashboard"
         },
         {
@@ -30,7 +30,7 @@ export default function Main() {
     
       let activeClassName = "underline";
   return (
-    <Box>
+    <Box data-aos="fade-up">
         <Flex w="100%" >
           {
             Links.map((elem)=>(
@@ -40,7 +40,7 @@ export default function Main() {
             ))
           }
         </Flex>
-        <AllRoutes/>
+        <AllRoutes1/>
     </Box>
   )
 }

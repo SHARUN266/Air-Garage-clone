@@ -4,10 +4,10 @@ import Dailyperformance from './Dailyperformance'
 import Dashboard from './Dashboard'
 import OnlineListing from './OnlineListing'
 
-export default function AllRoutes() {
+export default function AllRoutes1() {
   return (
     <Routes>
-        <Route path="/dashboard" element={<Dashboard/>}/>
+        <Route path="/" element={<Dashboard/>}/>
         <Route path="/dailyperformance" element={<Dailyperformance/>}/>
         <Route path="/onlinedailyreport" element={<OnlineListing/>}/>
     </Routes>

@@ -4,12 +4,10 @@ import {
   Flex,
   Menu,
   MenuItem,
-  
   useDisclosure,
   useColorModeValue,
- 
-  
   IconButton,
+  
   HStack,
 } from "@chakra-ui/react";
 import { CloseIcon, HamburgerIcon } from "@chakra-ui/icons";
@@ -32,34 +30,31 @@ const NavLink = ({ children }: { children: ReactNode }) => (
 );
 
 export default function Nav() {
-
   const { isOpen, onOpen, onClose } = useDisclosure();
   const Links = [
-     {
-      link:"/findparking",
-      title:"Find parking"
-     },
-     {
-      link:"/login",
-      title:"Login"
-     }
-
+    {
+      link: "/findparking",
+      title: "Find parking",
+    },
+    {
+      link: "/login",
+      title: "Login",
+    },
   ];
-  const Links1 = [ 
+  const Links1 = [
     {
-     link:"/findparking",
-     title:"Find parking"
+      link: "/findparking",
+      title: "Find parking",
     },
     {
-     link:"/login",
-     title:"Login"
+      link: "/login",
+      title: "Login",
     },
     {
-      link:"/talktosales",
-      title:"Talk to sales"
-    }
-
- ]
+      link: "/talktosales",
+      title: "Talk to sales",
+    },
+  ];
   const styles = {
     fontFamily: "'Louis george cafe', sans-serif;",
     padding: "20px",
@@ -75,7 +70,9 @@ export default function Nav() {
       <Box bg="white" m={"auto"} w="90%" px={4}>
         <Flex h={16} alignItems={"center"} justifyContent={"space-between"}>
           <Box>
-            <Logo />
+            <Link to="/">
+              <Logo />
+            </Link>
           </Box>
 
           <Flex alignItems={"center"}>
@@ -95,11 +92,13 @@ export default function Nav() {
                 display={{ base: "none", md: "flex" }}
               >
                 {Links.map((elem) => (
-                  <Box style={styles}>  <Link   to={elem.link}  > {elem.title}</Link> </Box>
+                  <Box style={styles}>
+                    {" "}
+                    <Link to={elem.link}> {elem.title}</Link>{" "}
+                  </Box>
                 ))}
                 <Box color={styles} fontWeight={"bold"}>
                   <Link to="/talktosales">Talk to sales</Link>
-                  
                 </Box>
               </HStack>
             </HStack>
@@ -109,7 +108,10 @@ export default function Nav() {
           <Box pb={4} display={{ md: "none" }}>
             <Menu as={"nav"} spacing={4}>
               {Links1.map((link) => (
-                <MenuItem key={link}> <Link  to={link.link}  >{link.title}</Link>  </MenuItem>
+                <MenuItem key={link}>
+                  {" "}
+                  <Link to={link.link}>{link.title}</Link>{" "}
+                </MenuItem>
               ))}
             </Menu>
           </Box>

@@ -28,3 +28,28 @@
 #deal:hover{
   transform: scale(1.1);
 }
+
+#FreeParkingButton{
+  background: white;
+  color: #000;
+  font-weight: 100;
+  font-size: 15px;
+  padding: 0rem 3rem;
+  border: 1px solid;
+  transition: 0.9s;
+}
+#FreeParkingButton:hover{
+  background: #000;
+  color: white;
+}
+
+#inpuBoxHeight{
+  height: 3rem;
+  
+
+}
+#inpuBoxHeight:focus {
+  background: rgb(224, 224, 224);
+  color: #000;
+
+}

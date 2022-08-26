@@ -17,6 +17,7 @@ export default function PartnerSpotlight() {
       alignItems="center"
       p="2rem"
       h={"auto"}
+      data-aos="fade-up"
       direction={{ base: "column", md: "row" }}
     >
       <Box textAlign={"justify"}>

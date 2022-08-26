@@ -15,7 +15,7 @@ export default function Card() {
         }
     ]
   return (
-    <SimpleGrid m="7% 0% 7% 0%" gap={"2rem"}  columns={[1,1,2]}>
+    <SimpleGrid data-aos="flip-left" m="7% 0% 7% 0%" gap={"2rem"}  columns={[1,1,2]}>
         {
             card.map((elem)=>(
                 <Box   >
