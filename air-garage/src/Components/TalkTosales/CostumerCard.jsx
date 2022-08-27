@@ -14,9 +14,10 @@ import {
   
   export default function SocialProfileSimple({img,from,comment,name}) {
     return (
-      <Center py={6}  mt="5%"  >
+      <Center data-aos="fade-up" py={6}  mt="20%"  >
       
         <Box
+
           maxW={'320px'}
           w={'full'}
           bg={useColorModeValue('white', 'gray.900')}

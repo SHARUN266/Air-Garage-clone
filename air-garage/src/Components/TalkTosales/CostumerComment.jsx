@@ -28,8 +28,8 @@ export default function CostumerComment() {
     ]
     const [userData,setUserData]=useState(data)
   return (
-    <Box h={["auto","auto","80vh"]} bg="gray.200">
-        <SimpleGrid w={["100%","100%","75%"]} gap="2rem" m="auto" columns={[1,2,3]}   >
+    <Box h={["auto","auto","80vh"]} bg="gray.200" >
+        <SimpleGrid  w={["100%","100%","75%"]} gap="2rem" m="auto" columns={[1,2,3]}   >
         {
             userData.map((elem)=>(
                 <SocialProfileSimple img={elem.img} comment={elem.comment} from={elem.from} name={elem.name}  />

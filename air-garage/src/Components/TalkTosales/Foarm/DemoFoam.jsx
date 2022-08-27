@@ -10,10 +10,21 @@ import {
     Link,
     Stack,
     Image,
-    Text
+    Text,
+    background
   } from '@chakra-ui/react';
+  import React from 'react'
+  import swal from "sweetalert";
   
   export default function DemoFoam() {
+    const handleAudit=()=>{
+     
+      swal("Thanks for register here we will connect you soon!", "", "success",{
+        button:"Ok",
+       
+      });
+      
+    }
     return (
       <Stack data-aos="fade-up" minH={'40%'} w="60%" direction={{ base: 'column', md: 'row' }}  color="white"  m="auto" >
         <Flex  p={8} flex={1} align={'center'} justify={'center'} >
@@ -48,7 +59,7 @@ import {
                 
                 
               </Stack>
-              <Button color={"black"} bg={"white"}  variant={'solid'}  h="4rem" >
+              <Button onClick={handleAudit} color={"black"} bg={"white"}  variant={'solid'}  h="4rem" >
                 Get A Free Parking Audit
               </Button>
               <Text  color={"text"}  >We won't spam you, we promise.</Text>
