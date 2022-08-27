@@ -18,7 +18,7 @@ export default function AutoMated() {
         </Link>
         </Box >
           <Heading mt="30%" fontFamily={"'Louis george cafe', sans-serif;"} lineHeight={"60px"} color={"white"} fontWeight={200}  >Automated, transparent parking management</Heading>
-          <Button data-aos="fade-up"  data-aos-duration="3000" mt="15%" fontSize={"14px"} fontWeight={200} _hover="none"  bg="color" color={"white"} p="0rem 2rem"  >GET FREE PARKING AUDIT</Button>
+        <Link to="/findparking">  <Button data-aos="fade-up"  data-aos-duration="3000" mt="15%" fontSize={"14px"} fontWeight={200} _hover="none"  bg="color" color={"white"} p="0rem 2rem"  >GET FREE PARKING AUDIT</Button></Link>
           <Image mt="15%" src="https://assets.website-files.com/5d55f1425cb6b7a18aa77528/62eac88a544a95aa599fba34_ratings-2-p-500.png"/>
           </Box>
         </Box>

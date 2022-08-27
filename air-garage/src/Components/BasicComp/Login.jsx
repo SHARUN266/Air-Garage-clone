@@ -27,6 +27,7 @@ import { AppContext } from "../../Context/AppContext";
 import { useNavigate,Link } from "react-router-dom";
 import Logo from "./Logo";
 import SmallWithSocial from "../TalkTosales/BasicFooter";
+import swal from "sweetalert";
 
 export default function SplitScreen() {
   const { loginUser } = useContext(AppContext);
@@ -39,7 +40,7 @@ export default function SplitScreen() {
       email,
       password,
     };
-    fetch(`https://reqres.in/api/login`, {
+    fetch(`https://reqres.in/api/logi`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -51,8 +52,11 @@ export default function SplitScreen() {
       })
       .then((res) => {
         loginUser(res.token);
+       
         nav("/talktosales");
-      });
+      }).catch((err)=>{
+        swal("Oops!", "Something went wrong", "wrong");
+      })
   };
   return (
     <>

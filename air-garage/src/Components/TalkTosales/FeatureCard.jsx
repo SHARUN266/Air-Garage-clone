@@ -20,7 +20,7 @@ export default function FeatureCard() {
         }
     ]
   return (
-    <Box  h="auto" p="3rem" bg="gray.200" >
+    <Box   h="auto" p="3rem" bg="gray.200" >
       <SimpleGrid w={"60%"} m="auto"  >
         {
             data.map((elem)=>(

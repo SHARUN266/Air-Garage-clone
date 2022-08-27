@@ -14,7 +14,7 @@ import FreeParkingAuditButton from "./FreeParkingAuditButton";
 
 export default function FeatureComp({ img,title,text }) {
   return (
-    <Center py={6}>
+    <Center py={6}    data-aos="dade-up"        >
       <Stack
         borderWidth="1px"
         borderRadius="xl"
